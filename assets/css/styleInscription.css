@@ -1,3 +1,4 @@
+
 button{
     width: 200px;
     height: 30px;
@@ -11,15 +12,11 @@ p{
     padding: 0 ;
     margin-top: -4%;
 }
-
 .containerInscription{
     display: flex;
     flex-direction: column;
 }
 
-.containerInscription div{
-    margin: 20px;
-}
 .containerInscription label{
     display: inline-block;
     width: 100%;
@@ -42,12 +39,13 @@ p{
     display:block;
 }
 
-/**********test*/
+
 .input-wrapper {
     display: flex;
     align-items: center;
     position: relative;
     margin-top: 5px;
+    margin: 20px;
 }
 .input-wrapper input {
     flex: 1; /* Permet à l'input de prendre toute la largeur disponible */
@@ -59,8 +57,52 @@ p{
     bottom: 10px;
     right: 10px;  /*Décale l'image vers la droite*/
 }
-/******* FIN TEST */
 
+#containerQuality{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+.containerQualityClass{
+    /* border: 1px solid white; */
+    width: min-content;
+    display: flex;
+    margin-right: 5px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.containerQualityClass>p{
+    text-align: center;
+    font-size: 1rem;
+}
+.colorQuality{
+    width: 10dvw;
+    height: 5px;
+
+    margin-bottom: 2px;
+    /* border-radius: 100%; */
+
+}
+#colorFaible{
+    background-color: rgb(255, 115, 0);
+}
+#colorMoyen{
+    background-color: rgb(241, 241, 13);
+}
+#colorFort{
+    background-color:green;
+}
+#faible{
+    visibility: hidden;
+}
+#moyen{
+    visibility: hidden;
+}
+#fort{
+    visibility: hidden;
+}
 
 @media screen and (max-width: 600px) {
     .mesBtn{
@@ -72,3 +114,4 @@ p{
         margin-bottom: 10px;
     }
 }
+

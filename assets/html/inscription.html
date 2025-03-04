@@ -59,7 +59,7 @@
                         <label for="name">Nom d'utilisateur</label>
                         <div class="input-wrapper">
                             <input type="text" name="name" id="name" min="3" placeholder="3 caractères minimum">
-                            <img src="" alt="">
+                            <img src="" alt="" id="imgName">
                         </div>
                         <p id="errorName">Choisissez un pseudo contenant au moins 3 caractères</p>
                     </div>
@@ -67,30 +67,45 @@
                         <label for="mail">Entrez votre email</label>
                         <div class="input-wrapper">
                             <input type="email" name="email" id="email" placeholder="votre email">
-                            <img src="../images/check.svg" alt="">
+                            <img src="" alt="" id="imgMail">
                         </div>
                         <p id="errorMail">Rentrez un mail valide</p>
                     </div>
                     <div>
-                        <label for="mdp">Mot de passe</label>
+                        <label for="psw">Mot de passe</label>
                         <div class="input-wrapper">
-                            <input type="password" name="mdp" id="mdp" placeholder="votre mot de passe">
-                            <img src="../images/check.svg" alt="">
+                            <input type="password" name="psw" id="psw" placeholder="votre mot de passe">
+                            <img src="" alt="" id="imgPsw">
                         </div>
-                        <p id="errorMail">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
+                        <p id="errorPsw">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
                     </div>
                     <div>
-                        <label for="mdpConfirm">Confirmer le mot de passe</label>
+                        <label for="pswConfirm">Confirmer le mot de passe</label>
                         <div class="input-wrapper">
-                            <input type="password" name="mdpConfirm" id="mdpConfirm"
+                            <input type="password" name="pswConfirm" id="pswConfirm"
                                 placeholder="Confirmer le mot de passe">
-                            <img src="../images/check.svg" alt="">
+                            <img src="" alt="" id="imgPswC">
                         </div>
-                        <p id="errorMail">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
+                        <p id="errorPswC"></p>
+                        <div id="containerQuality">
+                            <div class="containerQualityClass" id="faible">
+                                <div class="colorQuality" id="colorFaible"></div>
+                                <p>faible</p>
+                            </div>
+                            <div class="containerQualityClass" id="moyen">
+                                <div class="colorQuality" id="colorMoyen"></div>
+                                <p>moyen</p>
+                            </div>
+                            <div class="containerQualityClass" id="fort">
+                                <div class="colorQuality" id="colorFort"></div>
+                                <p>fort</p>
+                            </div>
+
+                        </div>
                     </div>
                     <div class="mesBtn">
                         <button class="createAccount">Création du compte</button>
-                        <button type="reset">Annuler</button>
+                        <button id="reset" type="reset">Annuler</button>
                     </div>
                 </form>
             </fieldset>
