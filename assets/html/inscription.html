@@ -1,0 +1,107 @@
+<!-- Doctype : Document type : qui definit le type du document -->
+<!DOCTYPE html>
+<!-- html : balise racine du document -->
+<html lang="fr">
+<!-- head : configuration du document -->
+
+<head>
+    <!-- definition de l'encodage : utf-8 recommandé par W3C -->
+    <meta charset="utf-8">
+    <!-- mode compatibilité Edge -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- titre de la page -->
+    <title>ENI Memory</title>
+    <!-- Description du document -->
+    <meta name="description" content="Jeu memory">
+    <!-- Viewport : premier pas pour le responsive design - mise à l'echelle en fonction de l'ecran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleInscription.css">
+    <script src="../js/script.js"></script>
+    <!-- <script src="../js/canvas.js"></script> -->
+
+</head>
+
+<body><!-- Body corps du document -->
+    <h1>ENI - MEMORY - S'inscrire</h1>
+    <header><!-- entête de la page -->
+        <nav class="containerInscription">
+            <ul>
+                <li>
+                    <a href="../../index.html">Accueil</a>
+                </li>
+                <li>
+                    <a aria-current="page" href="assets/html/inscription.html">S'inscrire</a>
+                </li>
+                <li>
+                    <a href="#">Se connecter</a>
+                </li>
+                <li>
+                    <a href="#">Profil</a>
+                </li>
+                <li>
+                    <a href="">Jouer</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="containerInscription"><!-- Contenu principal de la page  -->
+        <section>
+            <fieldset>
+                <form action="" method="GET">
+                    <legend>Inscrivez-vous</legend>
+
+                    <div>
+                        <label for="name">Nom d'utilisateur</label>
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="name" min="3" placeholder="3 caractères minimum">
+                            <img src="" alt="">
+                        </div>
+                        <p id="errorName">Choisissez un pseudo contenant au moins 3 caractères</p>
+                    </div>
+                    <div>
+                        <label for="mail">Entrez votre email</label>
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="email" placeholder="votre email">
+                            <img src="../images/check.svg" alt="">
+                        </div>
+                        <p id="errorMail">Rentrez un mail valide</p>
+                    </div>
+                    <div>
+                        <label for="mdp">Mot de passe</label>
+                        <div class="input-wrapper">
+                            <input type="password" name="mdp" id="mdp" placeholder="votre mot de passe">
+                            <img src="../images/check.svg" alt="">
+                        </div>
+                        <p id="errorMail">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
+                    </div>
+                    <div>
+                        <label for="mdpConfirm">Confirmer le mot de passe</label>
+                        <div class="input-wrapper">
+                            <input type="password" name="mdpConfirm" id="mdpConfirm"
+                                placeholder="Confirmer le mot de passe">
+                            <img src="../images/check.svg" alt="">
+                        </div>
+                        <p id="errorMail">Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.</p>
+                    </div>
+                    <div class="mesBtn">
+                        <button class="createAccount">Création du compte</button>
+                        <button type="reset">Annuler</button>
+                    </div>
+                </form>
+            </fieldset>
+
+        </section>
+
+    </main>
+    <footer><!-- Pied de page  -->
+
+    </footer>
+</body>
+
+
+</html>

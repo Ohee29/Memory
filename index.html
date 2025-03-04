@@ -1,0 +1,73 @@
+<!-- Doctype : Document type : qui definit le type du document -->
+<!DOCTYPE html>
+<!-- html : balise racine du document -->
+<html lang="fr">
+<!-- head : configuration du document -->
+
+<head>
+    <!-- definition de l'encodage : utf-8 recommandé par W3C -->
+    <meta charset="utf-8">
+    <!-- mode compatibilité Edge -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- titre de la page -->
+    <title>ENI Memory</title>
+    <!-- Description du document -->
+    <meta name="description" content="Jeu memory">
+    <!-- Viewport : premier pas pour le responsive design - mise à l'echelle en fonction de l'ecran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/canvas.js"></script> -->
+</head>
+
+<body><!-- Body corps du document -->
+    <h1>ENI - MEMORY - Acceuil</h1>
+    <header><!-- entête de la page -->
+        <nav class="container">
+                    <ul >
+                        <li>
+                            <a href="#">Accueil</a>
+                        </li>
+                        <li>
+                            <a  href="assets/html/inscription.html">S'inscrire</a>
+                        </li>
+                        <li>
+                            <a href="#">Se connecter</a>
+                        </li>
+                        <li>
+                            <a href="#">Profil</a>
+                        </li>
+                        <li>
+                            <a href="">Jouer</a>
+                        </li>
+                    </ul>
+        </nav>
+    </header>
+
+    <main><!-- Contenu principal de la page  -->
+        <section id="canvas">
+            <p>Bienvenue sur le site du Memory de l'ENI</p>
+            <p>Venez jouer avec nous et faite le meilleur score possible</p>
+            <h2>Régle du jeu</h2>
+            <ul>
+                <li>Retournez deux cartes.Si les images sont identiques, le jeu laisse les cartes visibles</li>
+                <li>Si les images sont différentes, les cartes se retournent faces cachées là où elles étaient.</li>
+                <li>La partie est terminée lorsque toutes les cartes ont été assemblées par paires</li>
+            </ul>
+            <img src="assets/images/memory-legume/memory_detail.png" alt="">
+            <p>Si vous voulez vous souvenir de votre score.Inscrivez-vous via le formulaire.</p>
+            <p>Le jeu garde les 5 meilleurs scores.</p>
+            <p>Si vous voulez relancer une partie cliquez sur la barre d'espace</p>
+
+        </section>
+    </main>
+    <footer><!-- Pied de page  -->
+
+    </footer>
+</body>
+
+
+</html>

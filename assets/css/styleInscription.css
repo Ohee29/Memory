@@ -1,0 +1,74 @@
+button{
+    width: 200px;
+    height: 30px;
+    background-color: wheat;
+}
+fieldset{
+    border: none;
+}
+p{
+    font-size: 0.75rem;
+    padding: 0 ;
+    margin-top: -4%;
+}
+
+.containerInscription{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInscription div{
+    margin: 20px;
+}
+.containerInscription label{
+    display: inline-block;
+    width: 100%;
+
+}
+.containerInscription input{
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid;
+}
+.mesBtn{
+    display: flex;
+    justify-content: space-around;
+}
+.errorName{
+    display:block;
+}
+
+/**********test*/
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 5px;
+}
+.input-wrapper input {
+    flex: 1; /* Permet à l'input de prendre toute la largeur disponible */
+    margin-left: -20px;
+}
+.input-wrapper img {
+    position: absolute;
+    width: 5%;  /* Ajuste la taille de l'image */
+    bottom: 10px;
+    right: 10px;  /*Décale l'image vers la droite*/
+}
+/******* FIN TEST */
+
+
+@media screen and (max-width: 600px) {
+    .mesBtn{
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    button{
+        margin-bottom: 10px;
+    }
+}
