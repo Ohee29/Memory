@@ -1,20 +1,12 @@
 $(init);
+//  Boolen de validation de form plus input si vraie
+let bUserName=false;
+let bUserMail=false;
+let bUserPsw=false;
+let bSamePsw=false;
 
 function init() {
   /***********
-   * Boolen de validation de form plus inuput si vraie
-   */
-  let bUserName;
-  let bUserMail;
-  let bUserPsw;
-  let bSamePsw;
-  /*********************
-   * Récuperation valeur formulaire
-   */
-  let userName = "";
-  let userMail = "";
-  let userPsw = "";
-  let userPswC = "";
 
   /*****************
    * Page inscription
@@ -25,7 +17,8 @@ function init() {
   $('#psw').on("input", pswPattern);
   $('#pswConfirm').on("input", pswConfirm);
   $('#reset').on("click", formAnnul);
-  $('createAccount').on("click", inscription);
+  $('#createAccount').on("submit", inscription);
+  $("form").on("submit", inscription);
 }
 /****************
  * Function
@@ -34,7 +27,6 @@ function nameLenght() {
   let textName = $('#errorName');//*****/
   let img = $("#imgName");
   let isOk = /.{3,}/.test($(this).val());
-  console.log($('#name').val());
   if (isOk) {
     textName.css("color", "black");
     img.attr('src', "../images/check.svg");
@@ -46,8 +38,9 @@ function nameLenght() {
     if ($('#name').val() == "") {
       $("#imgName").attr('src', "");
     }
-    bUserName = false;
+    bUserName = { b: false };
   }
+  validationBtnCompte();
 }
 function mailRegex() {
   let textMail = $('#errorMail');
@@ -65,9 +58,9 @@ function mailRegex() {
     if ($('#email').val() == "") {
       $("#imgMail").attr('src', "");
     }
-    bUserMail = false;
+    bUserMail = { b: false };
   }
-
+  validationBtnCompte();
 }
 function pswPattern() {
 
@@ -108,8 +101,9 @@ function pswPattern() {
     if ($('#psw').val() == "") {
       $("#imgPsw").attr('src', "");
     }
-    bUserPsw = false;
+    bUserPsw = { b: false };
   }
+  validationBtnCompte();
 }
 function pswConfirm() {
   let textPsw = $('#errorPswC');
@@ -130,6 +124,7 @@ function pswConfirm() {
     }
     bSamePsw = false;
   }
+  validationBtnCompte();
 }
 function formAnnul() {
   $("#imgName").attr('src', "");
@@ -140,12 +135,37 @@ function formAnnul() {
   $("#moyen").css('visibility', 'hidden');
   $("#fort").css('visibility', 'hidden');
 }
-function inscription() {
-
-
-
-
+function validationBtnCompte(){
+  if (!(bUserName.b && bUserMail.b && bUserPsw.b && bSamePsw)) {
+    $('#createAccount').prop('disabled',true);
+  }else{
+    $('#createAccount').prop('disabled',false);
+  }
 }
+function inscription(event) {
+  /********si tout et bon **** */
+  event.preventDefault(); // Empêche le rechargement de la page
+  if (bUserName.b && bUserMail.b && bUserPsw.b && bSamePsw) {
+      let users = (localStorage.getItem('users')) || [];
+      localStorage.setItem("users","SeBasTien");
+      localStorage.setItem("users","Poussin");
+      localStorage.pu("users","Autre");
+      console.log(users);
+      
+      // localStorage.setItem("Name",bUserName.name);
+
+      
+    // console.log($(this).serialize());
+    
+
+  } else {
+    !bUserName.b && alert("Veuillez entrer un nom !")
+  }
+}
+
+
+
+
 
 /****************
  * Fin Function
