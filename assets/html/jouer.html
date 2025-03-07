@@ -1,0 +1,90 @@
+<!-- Doctype : Document type : qui definit le type du document -->
+<!DOCTYPE html>
+<!-- html : balise racine du document -->
+<html lang="fr">
+<!-- head : configuration du document -->
+
+<head>
+    <!-- definition de l'encodage : utf-8 recommandé par W3C -->
+    <meta charset="utf-8">
+    <!-- mode compatibilité Edge -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- titre de la page -->
+    <title>ENI Memory - Jouer</title>
+    <!-- Description du document -->
+    <meta name="description" content="Jeu memory">
+    <!-- Viewport : premier pas pour le responsive design - mise à l'echelle en fonction de l'ecran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleInscription.css">
+    <link rel="stylesheet" href="../css/stylePlay.css">
+    <script src="../js/script.js"></script>
+
+    <!-- <script src="../js/canvas.js"></script> -->
+
+</head>
+<body><!-- Body corps du document -->
+    <h1>ENI - MEMORY - Jouer</h1>
+    <header><!-- entête de la page -->
+        <nav class="containerInscription">
+            <ul>
+                <li>
+                    <a href="../../index.html">Accueil</a>
+                </li>
+                <!-- <li>
+                    <a href="inscription.html">S'inscrire</a>
+                </li> -->
+                <li>
+                    <a href="connexion.html">Se connecter</a>
+                </li>
+                <li>
+                    <a href="profil.html">Profil</a>
+                </li>
+                <li>
+                    <a aria-current="page" href="#">Jouer</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main><!-- Contenu principal de la page  -->
+        <div class="bestScore">
+            <table>
+                <caption>Derniers meilleurs scores :</caption>
+                <tbody id="tabBestScore">
+                    <tr>
+                        <td>Pseudo</td>
+                        <td>Score</td>
+                        <td>Taille</td>
+                        <td>Choix Memory</td>
+                        <td>Date</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text">
+            <div>Tentez de gagner avec le moins d'essais possible.</div>
+            <div>Appuyez sur la <strong>barre d'espace</strong> pour relancer le jeu.</div>
+        </div>
+        <div class="scoreAndMoves">
+            <div id="textMoves">
+                <span>Nombres de coups :</span><span id="numMoves">0</span>
+            </div>
+            <div id="textScore">
+                <span>Votre Score :</span><span id="numScore">0</span>
+            </div>
+        </div>
+        <div id="canvasCard">
+
+        </div>
+    </main>
+    <footer><!-- Pied de page  -->
+
+    </footer>
+</body>
+
+
+</html>

@@ -7,6 +7,10 @@ button{
 fieldset{
     border: none;
 }
+legend{
+    text-align: center;
+    font-size: 2rem;
+}
 p{
     font-size: 0.75rem;
     padding: 0 ;
@@ -38,7 +42,6 @@ p{
 .errorName{
     display:block;
 }
-
 
 .input-wrapper {
     display: flex;

@@ -1,0 +1,132 @@
+<!-- Doctype : Document type : qui definit le type du document -->
+<!DOCTYPE html>
+<!-- html : balise racine du document -->
+<html lang="fr">
+<!-- head : configuration du document -->
+
+<head>
+    <!-- definition de l'encodage : utf-8 recommandé par W3C -->
+    <meta charset="utf-8">
+    <!-- mode compatibilité Edge -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- titre de la page -->
+    <title>ENI Memory - Profil</title>
+    <!-- Description du document -->
+    <meta name="description" content="Jeu memory">
+    <!-- Viewport : premier pas pour le responsive design - mise à l'echelle en fonction de l'ecran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleInscription.css">
+    <link rel="stylesheet" href="../css/styleProfil.css">
+    <script src="../js/script.js"></script>
+
+    <!-- <script src="../js/canvas.js"></script> -->
+
+</head>
+
+<body><!-- Body corps du document -->
+    <h1>ENI - MEMORY - Profil</h1>
+    <header><!-- entête de la page -->
+        <nav class="containerInscription">
+            <ul>
+                <li>
+                    <a href="../../index.html">Accueil</a>
+                </li>
+                <!-- <li>
+                    <a href="inscription.html">S'inscrire</a>
+                </li> -->
+                <li>
+                    <a href="connexion.html">Se connecter</a>
+                </li>
+                <li>
+                    <a aria-current="page" href="#">Profil</a>
+                </li>
+                <li >
+                    <a id="play" href="">Jouer</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="containerInscription"><!-- Contenu principal de la page  -->
+        <section>
+            <div class="legend">
+                <legend>Profil</legend>
+                <img src="../images/question.svg" alt="Un point d'interrogation bleu">
+            </div>
+            <div>
+                <label for="userNames">Nom d'utilisateur</label>
+                <div class="input-wrapper">
+                    <input readonly="text" name="userNames" id="userNames">
+                </div>
+            </div>
+            <div>
+                <label for="userEmail">Email</label>
+                <div class="input-wrapper">
+                    <input readonly="text" name="userEmail" id="userEmail">
+                </div>
+            </div>
+            <div class="ensembleChoix">
+                <label for="choixMemory">Choix du memory</label>
+                <select name="choix-Memory" id="choixMemory">
+                    <option value="alphabet-scrabble">Alphabet Scrabble</option>
+                    <option value="animaux">Animaux</option>
+                    <option value="animauxAnimes">Animaux Animés</option>
+                    <option value="animauxDomestiques">Animaux Domestiques</option>
+                    <option value="chiens">Chiens</option>
+                    <option value="dinosaures">Dinosaures</option>
+                    <option value="dinosauresAvecNom">Dinosaures Avec Nom</option>
+                    <option value="memory-legume">memory-legume</option>
+                </select>
+            </div>
+            <section id="canvas">
+                <img id="imgChoix" src="../images/alphabet-scrabble/memory_detail_scrabble.png"
+                    alt="images du memory selectionné">
+            </section>
+            <div class="tailleChoix">
+                <label for="choixTaille">Choix du memory</label>
+                <select name="choix-taille" id="choixTaille">
+                    <option  value="4par3">4 * 3</option>
+                    <option value="6par4">6 * 4</option>
+                    <option value="6par6">6 * 6</option>
+                </select>
+            </div>
+            <div class="mesBtn">
+                <button id="option" type="button">Enregistrez Option</button>
+            </div>
+            <div hidden id="tabScore">
+                <table>
+                    <caption>Derniers Scores :</caption>
+                    <tbody>
+                        <tr>
+                            <td>Pseudo</td>
+                            <td>Score</td>
+                            <td>Taille</td>
+                            <td>Choix Memory</td>
+                            <td>Date</td>
+                        </tr>
+                        <tr>
+                            <td id="pseudoJoueur"></td>
+                            <td id="scoreJoueur"></td>
+                            <td id="tailleChoixJoueur"></td>
+                            <td id="memoryChoixJoueur"></td>
+                            <td id="dateEnregJoueur"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </section>
+
+    </main>
+    <footer><!-- Pied de page  -->
+
+    </footer>
+</body>
+
+
+</html>

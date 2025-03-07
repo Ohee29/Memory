@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Utilisateurs et Meilleurs Scores</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">🏆 Classement des Meilleurs Scores 🏆</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Rang</th>
+                <th>Nom</th>
+                <th>Meilleur Score</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboard">
+            <!-- Les scores seront insérés ici -->
+        </tbody>
+    </table>
+
+    <script>
+        // Fonction pour récupérer les utilisateurs depuis localStorage
+        function getUsers() {
+            return JSON.parse(localStorage.getItem("users")) || [];
+        }
+
+        // Fonction pour enregistrer un utilisateur
+        function saveUser(name, email, password) {
+            let users = getUsers();
+            
+            // Vérifier si l'utilisateur existe déjà
+            if (users.some(user => user.email === email)) {
+                console.log("Utilisateur déjà enregistré");
+                return;
+            }
+            
+            let newUser = {
+                name: name,
+                email: email,
+                password: password,
+                bestScore: 0,
+                lastScore: 0
+            };
+            
+            users.push(newUser);
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+
+        // Fonction pour mettre à jour le score d'un utilisateur
+        function updateScore(email, score) {
+            let users = getUsers();
+            let user = users.find(user => user.email === email);
+            
+            if (user) {
+                user.lastScore = score;
+                if (score > user.bestScore) {
+                    user.bestScore = score;
+                }
+                localStorage.setItem("users", JSON.stringify(users));
+            }
+        }
+
+        // Fonction pour afficher les 5 meilleurs scores
+        function displayTopScores() {
+            let users = getUsers();
+            let topUsers = users.sort((a, b) => b.bestScore - a.bestScore).slice(0, 5);
+            let leaderboard = document.getElementById("leaderboard");
+            leaderboard.innerHTML = "";
+            
+            topUsers.forEach((user, index) => {
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${user.name}</td>
+                    <td>${user.bestScore}</td>
+                `;
+                leaderboard.appendChild(row);
+            });
+        }
+
+        // Charger le classement au chargement de la page
+        window.onload = displayTopScores;
+    </script>
+</body>
+</html>

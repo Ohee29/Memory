@@ -1,0 +1,45 @@
+.legend{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.legend img{
+    width: 15%;
+    align-self: center;
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 5px;
+}
+.tailleChoix{
+    margin-bottom: 30px;
+}
+#option{
+    margin-bottom: 20px;
+}
+table{
+    display: flex;
+    flex-direction: column;
+    table-layout: fixed;
+
+}
+caption{
+    font-size: 1.5rem;
+}
+tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+td{
+    flex: 1;
+    text-align: center;
+    width: 20%px;
+    border: 1px solid white;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 1px;
+    white-space: nowrap
+}
+caption{
+    margin-bottom: 5px;
+}
