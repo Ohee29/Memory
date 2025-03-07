@@ -56,17 +56,7 @@ h1 {
     margin: 20px 0px 30px;
 }
 
-@media screen and (max-width: 900px) {
-    main {
-        width: 90dvw;
-    }
-}
 
-@media screen and (max-width: 600px) {
-    header {
-        align-self: center;
-    }
-}
 
 li {
     margin: 5px;
@@ -84,26 +74,15 @@ section>img {
     margin-bottom: 5px;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-}
 
-.container {
-    display: flex;
-    flex-direction: column;
-
-}
 
 .container div {
-    /* border: 1px solid white; */
     margin: 20px;
 
 }
 
 .container label {
     display: inline-block;
-    /* border: 1px solid red; */
     width: 100%;
     margin-bottom: 5px;
 
@@ -119,4 +98,17 @@ section>img {
     color: white;
     border-bottom: 1px solid;
 
+}
+
+@media (max-width : 600px) {
+    .container ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body{
+        border: 1px solid red;
+        align-items: center;
+        text-align: center;
+    }
 }

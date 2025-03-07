@@ -322,8 +322,8 @@ function flipCard(card) {
   }
 }
 let NumOfMoveGame = 0;
-let nbPaireTotal=0;
-let nbPaireNow=0;
+let nbPaireTotal = 0;
+let nbPaireNow = 0;
 function numOfMoves() {
   NumOfMoveGame++;
 
@@ -333,7 +333,7 @@ function numOfMoves() {
 function checkMatch() {
   let users = getUsers();
   let userConnect = users.find(user => user.connect === true);
-  
+
 
   let [card1, card2] = flippedCards;
   let backImage1 = card1.querySelector(".card-back img");
@@ -354,27 +354,27 @@ function checkMatch() {
     card1.classList.add("matched");
     card2.classList.add("matched");
     scoreJoueur++;
-    
+
     nbPaireNow++;
     console.log(nbPaireNow);
-    
+
     $('#numScore').text(scoreJoueur);
-    if(nbPaireNow === nbPaireTotal){
-      userConnect.lastScore=scoreJoueur;
-      if(scoreJoueur>= userConnect.bestScore){
+    if (nbPaireNow === nbPaireTotal) {
+      userConnect.lastScore = scoreJoueur;
+      if (scoreJoueur >= userConnect.bestScore) {
         console.log(userConnect.bestScore);
         console.log(scoreJoueur);
-        
-          userConnect.bestScore = scoreJoueur;
-          localStorage.setItem("users", JSON.stringify(users));
-          console.log("Entrez score");
-          
+
+        userConnect.bestScore = scoreJoueur;
+        localStorage.setItem("users", JSON.stringify(users));
+        console.log("Entrez score");
+
       }
     }
     flippedCards = []; // Réinitialiser
   } else {
     // Les cartes ne correspondent pas, les retourner après 1 seconde
-    scoreJoueur-=0.5;
+    scoreJoueur -= 0.5;
     $('#numScore').text(scoreJoueur);
     setTimeout(() => {
       card1.classList.remove("flipped");
@@ -393,7 +393,7 @@ function themesCard() {
     case "alphabet-scrabble": return ["1.png", "2.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png", "18.png", "19.png", "20.png", "21.png", "22.png", "23.png", "24.png", "25.png", "26.png"];
       break;
       chiens
-    case "animaux": return ["1.webp", "2.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp", "11.webp", "12.webp", "13.webp", "14.webp", "15.webp", "16.webp", "17.webp", "18.webp", "19.webp", "20.webp", "21.webp", "22.webp", "23.webp", "24.webp", "25.webp", "26.webp", "27.webp", "28.webp"];
+    case "animaux": return ["1.webp", "2.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp", "11.webp", "12.webp", "13.webp", "14.webp", "15.webp", "16.webp", "17.webp", "18.webp", "19.webp", "20.webp", "21.webp", "22.webp", "23.webp", "24.webp", "25.webp", "26.webp", "27.webp"];
       break;
     case "animauxAnimes": return ["1.webp", "2.webp", "4.webp", "5.webp", "6.webp", "7.webp", "8.webp"];
       break;
@@ -461,7 +461,7 @@ function displayCards() {
   if (userConnect.taille === "6par6") {
     nbDiv = 36;
   }
-  nbPaireTotal = nbDiv/2;
+  nbPaireTotal = nbDiv / 2;
   let tabCardusers = themesCard();
   let shuffleCards = generateMemoryCards(tabCardusers, nbDiv);
 
